@@ -11,4 +11,22 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
+
+    <Application.MainPage>
+        <Shell>
+            <TabBar x:Name="PhoneTabs">
+                <Tab Title="Inicio" Icon="tab_home.png">
+                    <ShellContent ContentTemplate="{DataTemplate local:HomePage}"  />
+                </Tab>
+                <Tab Title="Nuevo Tiquete" Icon="tab_newticket.png">
+                    <ShellContent ContentTemplate="{DataTemplate local:MyTicketsPage}"  />
+                </Tab>
+                <Tab Title="Mis Tiquetes" Icon="tab_mytickets.png">
+                    <ShellContent ContentTemplate="{DataTemplate local:HomePage}"  />
+                </Tab>
+            </TabBar>
+        </Shell>
+    </Application.MainPage>
+    
+    
 </Application>

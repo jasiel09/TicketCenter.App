@@ -51,6 +51,9 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\center.png" />
 	  <None Remove="Resources\Images\pass.png" />
+	  <None Remove="Resources\Images\tab_home.png" />
+	  <None Remove="Resources\Images\Tab_myTickets.png" />
+	  <None Remove="Resources\Images\tab_newTicket.png" />
 	  <None Remove="Resources\Images\user.png" />
 	</ItemGroup>
 
@@ -62,7 +65,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MyTicketsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NewTicketPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

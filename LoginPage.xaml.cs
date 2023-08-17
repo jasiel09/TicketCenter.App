@@ -9,10 +9,6 @@ public partial class LoginPage : ContentPage
 
     private void IniciarSesion_Clicked(object sender, EventArgs e)
     {
-		if (ValidarEmail.IsNotValid)
-		{
-			DisplayAlert("Error", "Correo inválido", "OK");
-			return;
-		}
+        //await Navigation.PushAsync(new HomePage());
     }
 }
