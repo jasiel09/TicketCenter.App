@@ -5,7 +5,7 @@
              Title="MyTicketsPage">
     <VerticalStackLayout>
         <Label 
-            Text="MIS TIQUETES"
+            Text="Nuevo Ticket"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
