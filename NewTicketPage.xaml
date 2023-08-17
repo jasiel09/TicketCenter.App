@@ -3,10 +3,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TicketCenter.NewTicketPage"
              Title="NewTicketPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="NUEVO TIQUETE"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Margin="0,20,0,0">
+            <Label Text="New Ticket" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20"/>
+            <Label Text="Title:" FontSize="16" Margin="0,20,0,0"/>
+            <Entry Placeholder="Ticket title"/>
+            <Label Text="Type:" FontSize="16" Margin="0,20,0,0"/>
+            <Picker x:Name="Type">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>--select--</x:String>
+                        <x:String>Problem</x:String>
+                        <x:String>Question</x:String>
+                        <x:String>Request</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Category:" FontSize="16" Margin="0,20,0,0"/>
+            <Picker x:Name="Category">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>--select--</x:String>
+                        <x:String>Software</x:String>
+                        <x:String>Hardware</x:String>
+                        <x:String>Network</x:String>
+                        <x:String>Servers</x:String>
+                        <x:String>BackUps</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Priority:" FontSize="16" Margin="0,20,0,0"/>
+            <Picker x:Name="Priority">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>--select--</x:String>
+                        <x:String>High</x:String>
+                        <x:String>Medium</x:String>
+                        <x:String>Low</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                <CheckBox/>
+                <Label Text="Affects Customer" VerticalOptions="Center"/>
+            </StackLayout>
+            <Label Text="Due Date" FontSize="16" Margin="0,20,0,0"/>
+            <Entry/>
+            <Label Text="Target Date" FontSize="16" Margin="0,20,0,0"/>
+            <Entry/>
+            <Label Text="Resolution Date" FontSize="16" Margin="0,20,0,0"/>
+            <Entry/>
+            <Label Text="Estimated Duration" FontSize="16" Margin="0,20,0,0"/>
+            <Entry/>
+            <Label Text="Actual Duration" FontSize="16" Margin="0,20,0,0"/>
+            <Entry/>
+            <Label Text="Tags" FontSize="16" Margin="0,20,0,0"/>
+            <Entry/>
+            <Label Text="Details" FontSize="16" Margin="0,20,0,0"/>
+            <Editor/>
+            <Label Text="Owner:" FontSize="16" Margin="0,20,0,0"/>
+            <Picker x:Name="Owner">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Administrator</x:String>
+                        <x:String>Opción 2</x:String>
+                        <x:String>Opción 3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Assigned To" FontSize="16" Margin="0,20,0,0"/>
+            <Picker x:Name="Assigned">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}" >
+                        <x:String>--unassigned--</x:String>
+                        <x:String>Opcion 1</x:String>
+                        <x:String>Opción 2</x:String>
+                        <x:String>Opción 3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label  Text="File:" FontSize="16" Margin="0,20,0,0"/>
+            <Button Text="Click to select file" Clicked="SelectFileButton_Clicked" Margin="0,20,0,0"/>
+            <Label x:Name="selectedFileLabel" FontSize="16" Text="Selected file: " Margin="0,20,0,0"/>
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                <Button Text="Create" FontSize="14" HorizontalOptions="StartAndExpand" Margin="0,20,0,0"/>
+                <Button Text="Back to List" FontSize="14" HorizontalOptions="End" Margin="0,20,0,0"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
