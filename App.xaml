@@ -19,7 +19,7 @@
                     <ShellContent ContentTemplate="{DataTemplate local:HomePage}"  />
                 </Tab>
                 <Tab Title="Nuevo Tiquete" Icon="tab_newticket.png">
-                    <ShellContent ContentTemplate="{DataTemplate local:MyTicketsPage}"  />
+                    <ShellContent ContentTemplate="{DataTemplate local:NewTicketPage}"  />
                 </Tab>
                 <Tab Title="Mis Tiquetes" Icon="tab_mytickets.png">
                     <ShellContent ContentTemplate="{DataTemplate local:HomePage}"  />
